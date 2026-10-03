@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hiba Chemlal | Full Stack Developer</title>
+
+    <meta name="description"
+          content="Portfolio de Hiba Chemlal, étudiante en Développement Digital Full Stack.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          <style>
+          /* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f0e8;
+    color: #321d1d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --cream: #f7f0e8;
+
+    --cream-light: #fffaf5;
+
+    --brown: #321d1d;
+
+    --wine: #571e25;
+
+    --wine-dark: #381318;
+
+    --rose: #b58c86;
+
+    --line: #d6c1b8;
+
+    --white: #ffffff;
+
+    --max-width: 1250px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    width: 100%;
+
+    padding: 25px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+
+    background: rgba(247, 240, 232, 0.95);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+}
+
+.logo span,
+.footer-logo span {
+
+    color: var(--wine);
+
+}
+
+
+.navbar {
+
+    display: flex;
+
+    gap: 35px;
+}
+
+
+.navbar a {
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    position: relative;
+}
+
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -7px;
+
+    left: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--wine);
+
+    transition: 0.3s;
+}
+
+
+.navbar a:hover::after {
+
+    width: 100%;
+}
+
+
+.header-btn {
+
+    background: var(--wine);
+
+    color: white;
+
+    padding: 12px 22px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.header-btn:hover {
+
+    background: var(--brown);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    min-height: 680px;
+
+    padding: 80px 6%;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--rose);
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(70px, 9vw, 135px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    color: var(--wine-dark);
+}
+
+
+.hero h1 span {
+
+    font-style: italic;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px var(--wine-dark);
+}
+
+
+.hero-line {
+
+    width: 130px;
+
+    height: 1px;
+
+    background: var(--rose);
+
+    margin: 35px 0 20px;
+}
+
+
+.role {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: var(--wine);
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.role span {
+
+    margin: 0 10px;
+}
+
+
+.intro {
+
+    max-width: 520px;
+
+    color: #685555;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+
+    padding: 14px 25px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.btn.primary {
+
+    background: var(--wine);
+
+    color: white;
+}
+
+
+.btn.primary:hover {
+
+    background: var(--brown);
+
+    transform: translateY(-3px);
+}
+
+
+.btn.secondary {
+
+    border: 1px solid var(--wine);
+
+    color: var(--wine);
+}
+
+
+.btn.secondary:hover {
+
+    background: var(--wine);
+
+    color: white;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.photo-container {
+
+    width: min(440px, 90%);
+
+    aspect-ratio: 0.78;
+
+    overflow: hidden;
+
+    position: relative;
+
+    z-index: 2;
+
+    border-radius: 230px 230px 15px 15px;
+
+    background: var(--wine);
+}
+
+
+.photo-container img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.image-decoration {
+
+    position: absolute;
+
+    width: 390px;
+
+    height: 390px;
+
+    background: var(--wine);
+
+    border-radius: 50%;
+
+    top: 50px;
+
+    right: 0;
+
+    z-index: 0;
+}
+
+
+.code-card {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 60px;
+
+    z-index: 5;
+
+    background: var(--cream-light);
+
+    padding: 18px 25px;
+
+    box-shadow: 0 15px 40px rgba(50, 29, 29, 0.15);
+
+    border-left: 3px solid var(--wine);
+}
+
+
+.code-card span {
+
+    font-size: 28px;
+
+    color: var(--wine);
+}
+
+
+.code-card p {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 110px 6%;
+}
+
+
+.section-heading {
+
+    margin-bottom: 60px;
+}
+
+
+.section-heading.centered {
+
+    text-align: center;
+}
+
+
+.section-heading > p {
+
+    color: var(--rose);
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 500;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 1.1;
+
+    color: var(--wine-dark);
+}
+
+
+.section-heading h2 em {
+
+    color: var(--wine);
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+
+    border-top: 1px solid var(--line);
+}
+
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+.about-text {
+
+    padding-right: 50px;
+}
+
+
+.about-text p {
+
+    margin-bottom: 20px;
+
+    color: #6a5753;
+}
+
+
+.about-text strong {
+
+    color: var(--wine);
+}
+
+
+.text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--wine);
+
+    font-weight: 600;
+
+    margin-top: 15px;
+}
+
+
+.text-link i {
+
+    transition: 0.3s;
+}
+
+
+.text-link:hover i {
+
+    transform: translateX(6px);
+}
+
+
+.about-card {
+
+    padding: 35px;
+
+    background: #eadbd1;
+
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.about-card.dark {
+
+    background: var(--wine);
+
+    color: white;
+}
+
+
+.number {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    opacity: 0.5;
+}
+
+
+.about-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+}
+
+
+.about-card p {
+
+    font-size: 14px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills {
+
+    background: var(--wine-dark);
+
+    max-width: none;
+
+    color: white;
+
+    padding-left: 6%;
+
+    padding-right: 6%;
+}
+
+
+.skills .section-heading h2 {
+
+    color: white;
+}
+
+
+.skills .section-heading > p {
+
+    color: #d5aaa3;
+}
+
+
+.skills-grid {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: rgba(255,255,255,0.2);
+}
+
+
+.skill-card {
+
+    padding: 40px 30px;
+
+    background: var(--wine-dark);
+
+    min-height: 330px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+
+    background: #4b191f;
+
+    transform: translateY(-5px);
+}
+
+
+.skill-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color: #9c6c68;
+
+    font-size: 12px;
+}
+
+
+.skill-card > i {
+
+    font-size: 30px;
+
+    margin-top: 35px;
+
+    margin-bottom: 25px;
+
+    color: #d4aaa3;
+}
+
+
+.skill-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+.skill-card p {
+
+    color: #d5c3c0;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.tags span,
+.project-tags span {
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    padding: 5px 9px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects {
+
+    background: var(--cream-light);
+
+    max-width: none;
+
+    padding-left: 6%;
+
+    padding-right: 6%;
+}
+
+
+.projects > .section-heading,
+.projects-grid {
+
+    max-width: var(--max-width);
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.project-card {
+
+    background: var(--cream);
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 50px rgba(50, 29, 29, 0.12);
+}
+
+
+.project-image {
+
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.project-one {
+
+    background:
+        linear-gradient(
+            135deg,
+            #3c1a1c,
+            #9e7169
+        );
+}
+
+
+.project-two {
+
+    background:
+        linear-gradient(
+            135deg,
+            #191919,
+            #73554c
+        );
+}
+
+
+.project-three {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c9aaa0,
+            #573a38
+        );
+}
+
+
+.project-image::before {
+
+    content: "< / >";
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 75px;
+
+    color: rgba(255,255,255,0.2);
+
+    position: absolute;
+}
+
+
+.project-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(55, 18, 23, 0.75);
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+
+.project-overlay i {
+
+    color: white;
+
+    font-size: 30px;
+}
+
+
+.project-card:hover .project-overlay {
+
+    opacity: 1;
+}
+
+
+.project-info {
+
+    padding: 30px;
+}
+
+
+.project-info > span {
+
+    font-size: 10px;
+
+    color: var(--rose);
+
+    letter-spacing: 2px;
+}
+
+
+.project-info h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin: 12px 0;
+}
+
+
+.project-info p {
+
+    color: #75615d;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.project-tags span {
+
+    color: var(--wine);
+
+    border-color: var(--line);
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.timeline {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 40px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.timeline-date {
+
+    color: var(--rose);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+.timeline-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+
+.timeline-content p {
+
+    color: #6b5955;
+
+    max-width: 650px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+
+    max-width: none;
+
+    background: var(--wine);
+
+    color: white;
+
+    padding-left: 6%;
+
+    padding-right: 6%;
+}
+
+
+.contact-container {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.contact-intro .small-title {
+
+    color: #d4aaa3;
+}
+
+
+.contact-intro h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 5vw, 70px);
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-intro h2 em {
+
+    color: #d3a7a0;
+}
+
+
+.contact-intro > p:not(.small-title) {
+
+    color: #dbc9c6;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+.contact-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.contact-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #f3e6e2;
+
+    font-size: 14px;
+}
+
+
+.contact-links i {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* FORM */
+
+.contact-form-box {
+
+    background: var(--cream-light);
+
+    color: var(--brown);
+
+    padding: 40px;
+}
+
+
+.input-group {
+
+    margin-bottom: 22px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+    color: var(--wine);
+}
+
+
+.input-group input,
+.input-group textarea {
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid var(--line);
+
+    background: transparent;
+
+    padding: 12px 0;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: var(--brown);
+
+    resize: vertical;
+}
+
+
+.input-group input:focus,
+.input-group textarea:focus {
+
+    border-color: var(--wine);
+}
+
+
+.send-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: var(--wine);
+
+    color: white;
+
+    padding: 17px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+
+.send-btn:hover {
+
+    background: var(--brown);
+}
+
+
+.send-btn i {
+
+    margin-left: 10px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: var(--wine-dark);
+
+    color: white;
+
+    padding: 30px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.footer-logo {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+footer p {
+
+    color: #bfa8a5;
+
+    font-size: 12px;
+}
+
+
+.socials {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.socials a {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.socials a:hover {
+
+    background: white;
+
+    color: var(--wine);
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+
+        gap: 15px;
+    }
+
+    .header-btn {
+
+        display: none;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr 1fr;
+
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+
+        font-size: 80px;
+    }
+
+    .skills-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-text {
+
+        grid-column: 1 / -1;
+
+        padding-right: 0;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+
+        padding: 18px 5%;
+
+        position: relative;
+    }
+
+    .navbar {
+
+        display: none;
+    }
+
+    .logo {
+
+        font-size: 23px;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 60px 5%;
+
+        text-align: center;
+
+        min-height: auto;
+    }
+
+
+    .hero h1 {
+
+        font-size: clamp(60px, 18vw, 90px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-line {
+
+        margin: 25px auto 18px;
+    }
+
+
+    .intro {
+
+        margin: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-image {
+
+        margin-top: 40px;
+    }
+
+
+    .image-decoration {
+
+        width: 300px;
+
+        height: 300px;
+
+        right: 50%;
+
+        transform: translateX(50%);
+    }
+
+
+    .photo-container {
+
+        width: 75%;
+
+    }
+
+
+    .code-card {
+
+        left: 3%;
+
+        bottom: 30px;
+    }
+
+
+    .section {
+
+        padding: 80px 5%;
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 40px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 45px;
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-text {
+
+        grid-column: auto;
+    }
+
+
+    .skills {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .projects {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-image {
+
+        height: 250px;
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .contact {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+    }
+
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .contact-form-box {
+
+        padding: 25px;
+    }
+
+
+    .contact-intro h2 {
+
+        font-size: 48px;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 57px;
+    }
+
+    .section-heading h2 {
+
+        font-size: 38px;
+    }
+
+    .contact-intro h2 {
+
+        font-size: 40px;
+    }
+
+    .photo-container {
+
+        width: 85%;
+    }
+
+}
+.project-one iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        HIBA<span>.</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="header-btn">
+        Me contacter
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            PORTFOLIO CRÉATIF
+        </p>
+
+        <h1>
+            HIBA<br>
+            <span>CHEMLAL</span>
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p class="role">
+            DÉVELOPPEUSE WEB <span>•</span> FULL STACK
+        </p>
+
+        <p class="intro">
+            Je transforme les idées en expériences web modernes,
+            fonctionnelles et intuitives. Passionnée par le
+            développement digital, j'aime créer des interfaces
+            qui combinent créativité, technologie et simplicité.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn primary">
+                Voir mes projets
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Me contacter
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <div class="image-decoration"></div>
+
+        <div class="photo-container">
+
+            <!-- Mets ta photo dans avatar.png -->
+
+            <img src="avatar.png"
+                 alt="Photo de Hiba Chemlal">
+
+        </div>
+
+        <div class="code-card">
+            <span>&lt;/&gt;</span>
+            <p>Code • Create • Innovate</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about section">
+
+    <div class="section-heading">
+
+        <p>01 — À PROPOS</p>
+
+        <h2>
+            Créer avec <em>curiosité</em>,<br>
+            développer avec passion.
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                Je suis <strong>Hiba Chemlal</strong>, étudiante en
+                Développement Digital Full Stack.
+            </p>
+
+            <p>
+                Mon parcours me permet de découvrir aussi bien
+                le développement Front-End que le Back-End,
+                tout en développant ma créativité et ma capacité
+                à concevoir des solutions digitales.
+            </p>
+
+            <p>
+                J'aime apprendre de nouvelles technologies,
+                transformer une idée en projet concret et créer
+                des expériences web simples, modernes et efficaces.
+            </p>
+
+            <a href="#contact" class="text-link">
+                Travaillons ensemble
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <div class="number">01</div>
+
+            <h3>
+                Full Stack
+            </h3>
+
+            <p>
+                Front-End + Back-End + Bases de données
+            </p>
+
+        </div>
+
+
+        <div class="about-card dark">
+
+            <div class="number">02</div>
+
+            <h3>
+                Creative
+            </h3>
+
+            <p>
+                Design moderne, interfaces intuitives
+                et expériences digitales.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="skills section">
+
+    <div class="section-heading centered">
+
+        <p>02 — COMPÉTENCES</p>
+
+        <h2>
+            Ce que je <em>sais faire</em>
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+
+            <span class="skill-number">01</span>
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Front-End</h3>
+
+            <p>
+                Création d'interfaces modernes,
+                responsives et interactives.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <span class="skill-number">02</span>
+
+            <i class="fa-solid fa-server"></i>
+
+            <h3>Back-End</h3>
+
+            <p>
+                Développement de la logique serveur
+                et des fonctionnalités web.
+            </p>
+
+            <div class="tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Python</span>
+            </div>
+
+        </div>
+        <div class="skill-card">
+
+            <span class="skill-number">03</span>
+
+            <i class="fa-solid fa-database"></i>
+
+            <h3>Database</h3>
+
+            <p>
+                Organisation, gestion et manipulation
+                des données.
+            </p>
+
+            <div class="tags">
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>CRUD</span>
+            </div>
+
+        </div>
+        <div class="skill-card">
+
+            <span class="skill-number">04</span>
+
+            <i class="fa-solid fa-wrench"></i>
+
+            <h3>Outils</h3>
+
+            <p>
+                Utilisation des outils de développement,
+                gestion de version et environnement.
+            </p>
+
+            <div class="tags">
+                <span>GitHub</span>
+                <span>VS Code</span>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="projects section">
+
+    <div class="section-heading">
+
+        <p>03 — PROJETS</p>
+
+        <h2>
+            Quelques projets<br>
+            <em>réalisés</em>
+        </h2>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <article class="project-card">
+
+            <div class="project-image project-one">
+                <iframe 
+    src="http://localhost/Hiba_Chemlal_CC3_SWD/Hiba_Chemlal_Projet_SWD/"
+    title="Kitchen Rose Store">
+</iframe>
+                <div class="project-overlay">
+                    <a href="http://localhost/Hiba_Chemlal_CC3_SWD/Hiba_Chemlal_Projet_SWD/" target="_blank">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="project-info">
+
+                <span>01 / E-Commerce</span>
+
+                <h3>
+                    Kitchen Rose Store
+                </h3>
+
+                <p>
+                    Création d'une boutique en ligne dédiée à la vente d'appareils électroménagers , le projet permet aux utilisateurs de consulter les produits , voir les détails , filtrer les articles et les ajouter au panier.
+                </p>
+
+                <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <div class="project-image project-two">
+                <div class="project-overlay">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="project-info">
+                <span>02 / FULL STACK</span>
+                <h3>
+                    Application Web
+                </h3>
+                <p>
+                    Projet web avec interface utilisateur,
+                    logique applicative et gestion des données.
+                </p>
+                <div class="project-tags">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+        </article>
+        <article class="project-card">
+            <div class="project-image project-three">
+                <div class="project-overlay">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="project-info">
+                <span>03 / UI DESIGN</span>
+                <h3>
+                    Interface moderne
+                </h3>
+                <p>
+                    Conception d'une interface claire,
+                    moderne et adaptée aux différents écrans.
+                </p>
+                <div class="project-tags">
+                    <span>UI</span>
+                    <span>UX</span>
+                    <span>Responsive</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience section">
+    <div class="section-heading centered">
+        <p>04 — PARCOURS</p>
+        <h2>
+            Mon parcours <em>digital</em>
+        </h2>
+    </div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">
+                2025 / 2027 — Aujourd'hui
+            </div>
+            <div class="timeline-content">
+                <h3>
+                    Développement Digital — Full Stack
+                </h3>
+                <p>
+                    Formation en développement digital,
+                    programmation web, bases de données,
+                    conception d'interfaces et développement
+                    d'applications.
+                </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-date">
+                Projets
+            </div>
+            <div class="timeline-content">
+                <h3>
+                    Projets académiques
+                </h3>
+                <p>
+                    Réalisation de projets permettant de mettre
+                    en pratique mes connaissances en développement
+                    Front-End et Back-End.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact section">
+    <div class="contact-container">
+        <div class="contact-intro">
+            <p class="small-title">
+                05 — CONTACT
+            </p>
+            <h2>
+                Créons quelque chose
+                de <em>beau</em> ensemble.
+            </h2>
+            <p>
+                Tu as un projet, une opportunité de stage
+                ou simplement envie d'échanger ?
+                Envoie-moi un message.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:hiba007chemlal@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                    hiba007chemlal@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/hiba-chemlal-0210b743a?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <!-- FORMULAIRE -->
+        <div class="contact-form-box">
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">
+                        Votre nom
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Votre nom"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="email">
+                        Votre email
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="exemple@gmail.com"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="subject">
+                        Sujet
+                    </label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Sujet du message"
+                        required>
+                </div>
+                <div class="input-group">
+                    <label for="message">
+                        Votre message
+                    </label>
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Écrivez votre message..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="send-btn">
+                    Envoyer le message
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-logo">
+        HIBA<span>.</span>
+    </div>
+    <p>
+        © 2026 Hiba Chemlal — Full Stack Developer
+    </p>
+    <div class="socials">
+        <a href="#">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hiba-chemlal-0210b743a?utm_source=share_via&utm_content=profile&utm_medium=member_android"">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:hiba007chemlal@gmail.com">
+            <i class="fa-regular fa-envelope"></i>
+        </a>
+    </div>
+</footer>
+<!-- ================= EMAIL SCRIPT ================= -->
+<script>
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name =
+        document.getElementById("name").value;
+    const email =
+        document.getElementById("email").value;
+    const subject =
+        document.getElementById("subject").value;
+    const message =
+        document.getElementById("message").value;
+    const destination =
+        "hiba007chemlal@gmail.com";
+    const emailSubject =
+        encodeURIComponent(subject);
+    const emailBody =
+        encodeURIComponent(
+`
+Bonjour Hiba,
+Nom : ${name}
+Email : ${email}
+Message :
+${message}
+--------------------
+Message envoyé depuis le portfolio de Hiba Chemlal.
+`
+        );
+    window.location.href =
+        `mailto:${destination}?subject=${emailSubject}&body=${emailBody}`;
+});
+</script>
+</body>
+</html>
